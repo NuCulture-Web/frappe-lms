@@ -1,0 +1,30 @@
+{
+	"contract": "module-manifest.v1",
+	"id": "learning",
+	"name": "Training",
+	"description": "Frappe Learning on the client's ERPNext site: courses, lessons, quizzes, batches, evaluations and certificates for employee training.",
+	"scope": "core",
+	"product": "back-office",
+	"frappeApp": "lms",
+	"enable": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/lms"
+	},
+	"probe": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/.well-known/nuculture-build/learning.json"
+	},
+	"peopleRoles": {
+		"Owner": [
+			"Moderator"
+		],
+		"Manager": [
+			"Course Creator"
+		],
+		"Staff": [
+			"LMS Student"
+		]
+	}
+}
